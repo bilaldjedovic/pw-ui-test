@@ -10,7 +10,7 @@ export class TablesPage {
   async getTheRowByAnyTestInThisRow() {
     await this.page
       .locator(
-        "xpath=/html/body/ngx-app/ngx-pages/ngx-one-column-layout/nb-layout/div/div/div/div/div/nb-layout-column/ngx-tables/ngx-smart-table/nb-card/nb-card-body/ng2-smart-table/ng2-smart-table-pager/nav/ul/li[3]"
+        "xpath=/html/body/ngx-app/ngx-pages/ngx-sample-layout/nb-layout/div/div/div/div/div/nb-layout-column/ngx-tables/ngx-smart-table/nb-card/nb-card-body/ng2-smart-table/ng2-smart-table-pager/nav/ul/li[3]"
       )
       .click();
     const targetRow = this.page.getByRole("row", {

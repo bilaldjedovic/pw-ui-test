@@ -38,6 +38,6 @@ export class RegisterPage {
     await this.page.getByRole("button", { name: "REGISTER" }).click();
 
     await this.page.waitForTimeout(5000);
-    expect(await this.page.url()).toContain("/pages/iot-dashboard");
+    expect(await this.page.url()).toContain("/ngx-admin/pages/dashboard");
   }
 }

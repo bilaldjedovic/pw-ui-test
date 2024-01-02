@@ -15,15 +15,13 @@ export class LoginPage {
       .fill(loginCredentials.email);
 
     await this.page.getByRole("textbox", { name: "Password" }).click();
-    await this.page
-      .getByRole("textbox", { name: "Password" })
-      .fill(loginCredentials.password);
+    await this.page.getByRole("textbox", { name: "Password" }).fill(loginCredentials.password);
 
     await this.page.waitForTimeout(1000);
     await this.page.getByRole("button", { name: "LOG IN" }).click();
 
     await this.page.waitForTimeout(5000);
 
-    expect(await this.page.url()).toContain("/pages/iot-dashboard");
+    expect(await this.page.url()).toContain("/ngx-admin/pages/dashboard");
   }
 }

@@ -12,7 +12,7 @@ export class ToolTipPage {
       hasText: "Tooltip Placements",
     });
     await toolTipCard.getByRole("button", { name: "Top" }).hover();
-    this.page.getByRole("tooltip"); //if you have a role tooltip created
+    this.page.getByRole("tooltip");
     const tooltip = await this.page.locator("nb-tooltip").textContent();
     expect(tooltip).toEqual("This is a tooltip");
   }
