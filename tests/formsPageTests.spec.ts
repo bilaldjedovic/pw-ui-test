@@ -4,7 +4,8 @@ import { FormPage } from "../page-objects/forms-page";
 
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("http://localhost:4200/pages/forms/layouts");
+  await page.goto("https://www.akveo.com/ngx-admin/pages/dashboard");
+  await page.locator("xpath=/html/body/ngx-app/ngx-starter/nb-layout/div/div/div/div/div/nb-layout-column/nb-card[1]/nb-card-body").click();
 });
 
 test("Navigate to form page and subimt grid and inline form", async ({

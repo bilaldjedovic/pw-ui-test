@@ -3,7 +3,8 @@ import { NavigationPage } from "../page-objects/navigation-page";
 import { TablesPage } from "../page-objects/tables-page";
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("http://localhost:4200/pages/forms/layouts");
+  await page.goto("https://www.akveo.com/ngx-admin/pages/dashboard");
+  await page.locator("xpath=/html/body/ngx-app/ngx-starter/nb-layout/div/div/div/div/div/nb-layout-column/nb-card[1]/nb-card-body").click();
 });
 
 test("Check functionality of tables", async ({ page }) => {
